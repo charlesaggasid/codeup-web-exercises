@@ -17,12 +17,27 @@
     // console.log(hadBreakfast);
     // console.log(hadBreakfastMessage);
 
-    function typeCheck(input) {
-        if (typeof input == "string") {
-            return "Haha, it's a string of a string!";
-        } else {
-        return (input)
-        }
-    }
+    // function typeCheck(input) {
+    //     if (typeof input == "string") {
+    //         return "Haha, it's a string of a string!";
+    //     } else {
+    //     return (input)
+    //     }
+    // }
+    //
+    // console.log(typeCheck(1))
 
-    console.log(typeCheck(1))
+    function logFizzBuzz(count) {
+        for (var i = 1; i <= count; i++) {
+        var out = "";
+        if (i % 3 === 0) {
+            out += 'Fizz;'
+        }
+        if (i % 5 === 0) {
+            out += 'Buzz';
+        }
+        console.log(out || i);
+        }
+    };
+
+logFizzBuzz(100);
