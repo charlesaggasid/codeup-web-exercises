@@ -1,5 +1,4 @@
-(function(){
-    "use strict";
+ "use strict";
 
     /**
      * TODO:
@@ -7,7 +6,7 @@
      * 'names'.
      */
 
-    var names = ['Charles', 'Charlota', 'Charlie', 'Charie']
+    var names = ['Charles', 'Charlota', 'Charlie', 'Charie'];
 
     /**
      * TODO:
@@ -23,6 +22,10 @@
      * accessing each element's index.
      */
 
+    console.log(names[0]);
+    console.log(names[1]);
+    console.log(names[2]);
+    console.log(names[3]);
 
 
     /**
@@ -30,11 +33,17 @@
      * Write some code that uses a for loop to log every item in the names
      * array.
      */
-
+    for(var i = 0; i < names.length; i++) {
+        console.log('The names are ' + names[i] + '.')
+    }
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+    names.forEach(function (names) {
+        console.log('Here are the names ' + names + '.')
+    })
 
     /**
      * TODO:
@@ -50,4 +59,18 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-})();
+   function firstName(names) {
+        return (names[0]);
+    }
+    console.log(firstName(names));
+
+ function secondName(names) {
+     return (names[1]);
+ }
+ console.log(secondName(names));
+
+ function lastName(names) {
+     return (names[3]);
+ }
+ console.log(lastName(names));
+
