@@ -64,3 +64,13 @@
     //
     // console.log(moveToEnd(1,2,3,4))
 
+//OCT 25 Objects. Pokedex
+
+    const pokemon =
+        {
+            firstName:"Pika",
+            lastName:"Chu",
+            age:"100 years old",
+            color:"yellow",
+
+        }
