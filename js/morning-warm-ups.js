@@ -66,11 +66,46 @@
 
 //OCT 25 Objects. Pokedex
 
-    const pokemon =
-        {
-            firstName:"Pika",
-            lastName:"Chu",
-            age:"100 years old",
-            color:"yellow",
+    // const pokemon =
+    //     {
+    //         firstName:"Pika",
+    //         lastName:"Chu",
+    //         age:"100 years old",
+    //         color:"yellow",
+    //
+    //     }
 
+    var wrestlers = [
+        {
+            name: "Bret Hart",
+            nationality: "Canadian"
+        }, {
+            name: "Shawn Michaels",
+            nationality: "American"
+        }, {
+            name: "Christian Cage",
+            nationality: "Canadian"
+        }, {
+            name: "Keiji Mutoh",
+            nationality: "Japanese"
+        }, {
+            name: "Eddy Guerrero",
+            nationality: "American"
+        }, {
+            name: "Owen Hart",
+            nationality: "Canadian"
         }
+    ];
+
+function filterForCanadian(arr) {
+    var bucket = []
+   arr.forEach(function (element) {
+       if(element.nationality === "Canadian") {
+           //doSomething
+           bucket.push(element)
+       }
+   });
+   return bucket; //something
+}
+
+console.log(filterForCanadian(wrestlers))

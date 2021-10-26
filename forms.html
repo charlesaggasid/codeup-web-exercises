@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Register With Us</title>
+</head>
+<body>
+<form method="POST" action="https://request-inspector.glitch.me/">
+	
+		<label for="username">Email:
+			<input  id="username" name="username" type="text">
+		</label><br>
+		
+		<label for="password">Password:
+			<input id="password" name="password" type="password">
+		</label>
+		<br><br>
+		<input type="submit">
+		<input type="reset">
+
+	<hr>
+	
+		<label>
+			<textarea name="message">Bio</textarea>
+		</label><br><br>
+	<input type="submit">
+	
+	<hr>
+	
+	<p>How did you hear about us?</p>
+		<label for="billboard">
+			<input id="billboard" type="radio" name="quiz_question_1" value="billboard">Billboard
+		</label><br>
+		<label for="radio-advertisement">
+			<input id="radio-advertisement" type="radio" name="quiz_question_1" value="radio_advertisement">Radio Advertisement
+		</label><br>
+		<label for="internet-advertisement">
+			<input id="internet-advertisement" type="radio" name="quiz_question_1" value="internet_advertisement">Internet Advertisement
+		</label><br>
+		<label for="other">
+			<input id="other" type="radio" name="quiz_question_1" value="other">Other
+		</label><br>
+		<br>
+		<input type="submit">
+<!--	when given diff name, it'll select and won't allow to deselect-->
+	<hr>
+	
+	<p>How did you hear about us?</p>
+		<label for="billboard">
+			<input id="billboard" type="checkbox" name="quiz_question_1" value="billboard">Billboard
+		</label><br>
+		<label for="radio-advertisement">
+			<input id="radio-advertisement" type="checkbox" name="quiz_question_1" value="radio_advertisement">Radio Advertisement
+		</label><br>
+		<label for="internet-advertisement">
+			<input id="internet-advertisement" type="checkbox" name="quiz_question_1" value="internet_advertisement">Internet Advertisement
+		</label><br>
+		<label for="other">
+			<input id="other" type="checkbox" name="quiz_question_1" value="other">Other
+		</label><br>
+		<br>
+		<input type="submit">
+	
+	<hr>
+	
+	<p>What is your browser preference?</p>
+	<label for="browser_pref">
+	<select id="browser_pref" name="browser_pref">
+		<option value="chrome">Chrome</option>
+		<option value="safari">Safari</option>
+		<option value="firefox">Firefox</option>
+	</select>
+	</label>
+		<br><br>
+	<input type="submit" value="Submit now">
+		<hr>
+		
+</form>
+</body>
+</html>
