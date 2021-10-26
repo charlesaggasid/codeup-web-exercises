@@ -1,8 +1,12 @@
-h1 {
-    color: blue;
+.fancy-header {
+    color: darkred;
+    text-decoration: underline;
     text-align: center;
 }
 
+body {
+    background-color: lightblue;
+}
 .img-div1 {
     width: 40%;
     height: auto;
