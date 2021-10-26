@@ -1,0 +1,27 @@
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+.img-div1 {
+    width: 40%;
+    height: auto;
+}
+
+.img-div2 {
+    width: 40%;
+    height: auto;
+    /*float: right;*/
+
+}
+
+.img-div3 {
+    width: 40%;
+    height: auto;
+}
+
+.img-div4 {
+    width: 40%;
+    height: auto;
+    /*float: right;*/
+}
