@@ -1,10 +1,4 @@
 /* selector for id="container" */
-# {
-    margin: 50px auto;
-    width: 500px;
-    padding: 10px;
-}
-
 /*  selector for all "h1" elements
     that are a descendent of id="container"
     and have a class of "fancy-header" */

@@ -74,38 +74,43 @@
     //         color:"yellow",
     //
     //     }
+//
+//     var wrestlers = [
+//         {
+//             name: "Bret Hart",
+//             nationality: "Canadian"
+//         }, {
+//             name: "Shawn Michaels",
+//             nationality: "American"
+//         }, {
+//             name: "Christian Cage",
+//             nationality: "Canadian"
+//         }, {
+//             name: "Keiji Mutoh",
+//             nationality: "Japanese"
+//         }, {
+//             name: "Eddy Guerrero",
+//             nationality: "American"
+//         }, {
+//             name: "Owen Hart",
+//             nationality: "Canadian"
+//         }
+//     ];
+//
+// function filterForCanadian(arr) {
+//     var bucket = []
+//    arr.forEach(function (element) {
+//        if(element.nationality === "Canadian") {
+//            //doSomething
+//            bucket.push(element)
+//        }
+//    });
+//    return bucket; //something
+// }
+//
+// console.log(filterForCanadian(wrestlers))
 
-    var wrestlers = [
-        {
-            name: "Bret Hart",
-            nationality: "Canadian"
-        }, {
-            name: "Shawn Michaels",
-            nationality: "American"
-        }, {
-            name: "Christian Cage",
-            nationality: "Canadian"
-        }, {
-            name: "Keiji Mutoh",
-            nationality: "Japanese"
-        }, {
-            name: "Eddy Guerrero",
-            nationality: "American"
-        }, {
-            name: "Owen Hart",
-            nationality: "Canadian"
-        }
-    ];
-
-function filterForCanadian(arr) {
-    var bucket = []
-   arr.forEach(function (element) {
-       if(element.nationality === "Canadian") {
-           //doSomething
-           bucket.push(element)
-       }
-   });
-   return bucket; //something
-}
-
-console.log(filterForCanadian(wrestlers))
+   function areaOfCircle(x) {
+       return Math.round(Math.pow(x, 2) * Math.PI)
+   }
+   console.log(areaOfCircle(36));
