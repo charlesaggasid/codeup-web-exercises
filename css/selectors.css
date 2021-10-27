@@ -1,24 +1,118 @@
-/* selector for id="container" */
-/*  selector for all "h1" elements
-    that are a descendent of id="container"
-    and have a class of "fancy-header" */
-selector-todo {
-    color: blue;
-    text-decoration: underline;
+body {
+    font-family: Roboto, sans-serif;
 }
 
-/* selector for all "em" elements */
-selector-todo {
+.fancy-header {
+    font-family: 'Roboto', sans-serif;
+    color: darkred;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.header-paragraph {
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+
+}
+p {
+    font-family: Roboto, sans-serif;
+}
+ul {
+    font-family: Roboto, sans-serif;
+    list-style-type: circle;
+
+    list-style-position: inside;
+}
+
+ol {
+    font-family: Roboto, sans-serif;
+    list-style-type: lower-alpha;
+    list-style-position: inside;
+}
+#section-company-vision {
+    text-align: center;
+}
+
+body {
+    background-color: lightblue;
+}
+.img-div1 {
+    width: 40%;
+    height: auto;
+
+}
+
+.img-div2 {
+    width: 40%;
+    height: auto;
+    /*float: right;*/
+
+}
+
+.img-div3 {
+    width: 40%;
+    height: auto;
+}
+
+.img-div4 {
+    width: 40%;
+    height: auto;
+    /*float: right;*/
+}
+
+#img-div {
+    display: block;
+    margin-left:15em;
+    margin-right: auto;
+}
+
+a:link {    /* unvisited link */
+    color: #ff0000;
+    text-decoration: none;
+    border-bottom: 1px solid;
+}
+a:visited {    /* visited link */
+    color: #ff00ff;
+}
+a:hover {    /* mouse over link */
+    color: #00ff00;
+    border-bottom: none;
+}
+a:active {    /* active link */
+    color: #00ffff;
+}
+
+.our-product {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 8px;
+}
+
+.cell-highlight {
+    background-color: yellow;
     font-weight: bold;
 }
 
-/* selector for all elements with class="article" */
-selector-todo {
-    clear:both;
+th {
+    background-color: #333;
+    color: white;
+    text-transform: uppercase;
 }
 
-/*  selector for all "anchor" elements
-    that are a direct child of an element with class="article" */
-selector-todo {
-    float:right;
+footer {
+    text-align: center;
+font-size: 10%;
 }
