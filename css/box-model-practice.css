@@ -1,0 +1,68 @@
+/*MINI EXERCISE: Make a PB&J Recipe.*/
+
+/*>>> Don't worry with the ingredient list just yet*/
+/*>>> Place each recipe instruction inside a respective element (perhaps use <p> for each)*/
+/*>>> Create a CSS class (here and in box-model: try not to inline your CSS props if not necessary) and give it a background color*/
+/*                                                                                                  >>> Use height/width defined in the above CSS class in order to format those elements*/
+
+/*                                                                                                 >>> CONSIDER: In what ways can you use height/width to ensure your content is all visible?*/
+/*-->*/
+
+/*body {*/
+/*    background-color: black;*/
+/*}*/
+
+body {
+    background-color: #333333;
+}
+
+.article-container {
+    border: 5px solid whitesmoke;
+
+}
+p {
+    color: white;
+text-align: center;
+
+}
+
+.pbj-title {
+    background-color: beige;
+    width: fit-content;
+    height: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    font-weight: bold;
+    font-size: 40px;
+    text-shadow: ;
+
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#main-header {
+    background-color: red;
+    font-size: 50px;
+    width: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#ins {
+    background-color: blue;
+    width: fit-content;
+    height: 40px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 5px;
+    padding: 5px;
+
+    font-family: Roboto, sans-serif
+}
