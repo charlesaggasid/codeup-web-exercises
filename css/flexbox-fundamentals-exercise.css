@@ -103,7 +103,7 @@ flex-grow: 1;
     height: 5em;
     width: 5em;
     background: brown;
-    flex-grow: 0;
+    flex-grow: 01
     /* enter needed declarations here */
 }
 
@@ -112,18 +112,22 @@ flex-grow: 1;
 }
 
 section:nth-of-type(5) {
+justify-content: space-evenly;
     /* enter needed declarations here */
 }
 
 .yellow-box {
     background: yellow;
-    width: 2em;
-    height: 2em;
+    width: 30px;
+    height: 30px;
 }
 
 section:nth-of-type(6) {
     background: coral;
     height: 14em;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
     /* enter needed declarations here */
 }
 
