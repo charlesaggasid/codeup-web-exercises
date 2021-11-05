@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*Desktop*/
+@media screen and (min-width:768px) {
+	
+	.alert-info {
+		display: none;
+	}
+	
+	h1 {
+		/*text-align: left;*/
+	}
+	
+	.nav-links {
+		display: flex;
+		justify-content: flex-end;
+	}
+	li {
+		text-decoration: none;
+	}
+	
+	img {
+		width: 100%;
+	}
+	
+	
+/*	Main and sub left right fix*/
+	#main {
+		display: inline-block;
+	}
+	
+	.main {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start ;
+	}
+	
+	/*.main.p {*/
+	/*	justify-content: flex-end;*/
+	/*}*/
+	
+	
+	.sub-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+	
+	
+	
+}

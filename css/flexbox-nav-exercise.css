@@ -1,0 +1,30 @@
+* {
+ box-sizing: border-box;
+ }
+body {
+ margin: 0;
+ }
+nav {
+ background: lightgrey;
+ }
+ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ }
+nav a {
+ text-decoration: none;
+ color: black;
+ font-family: Verdana;
+ }
+nav a:hover {
+ background: lightgreen;
+ }
+
+ a {
+	display: inline-block;
+	}
+
+	li {
+	display: flex;
+	}

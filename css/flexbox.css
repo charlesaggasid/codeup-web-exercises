@@ -1,54 +1,140 @@
-* {
-box-sizing: border-box
+
+.container {
+border: 5px solid black;
+display: flex;
+/*height: 90%;*/
+/*flex-direction: row;*/
+/*justify-content: flex-end;*/
+/*align-items: flex-end;*/
+/*flex-wrap: wrap;*/
 }
 
-body {
- margin: 0;
+/*MAIN AXIS codes*/
+
+/* AXIS
+Main AXIS - LEFT to RIGHT - Horizontal
+Cross AXIS - TOP to BOTTOM - Vertical
+ */
+
+/* JUSTIFY CONTENT+++++++++
+default is FLEX-START
+flex-start, flex-end,
+center, space-around, space-between,space-evenly
+.container {
+justify-content: space-evenly;
+}
+ */
+/* +++++++++++++ */
+/* JUSTIFY CONTENT - MARGIN AUTO
+KEEP IN MIND
+* How the DIVs are arranged in HTML
+*
+ */
+.home1 {
+ }
+
+.search2 {
+/*margin-left: auto; */
+/* JUST THIS CODE will push SEARCHLOGOUT to the right.
+ */
+
+ }
+.logout3 {
+	/*margin-left: auto;*/
+/* gives Logout an auto margin left thus pushing it to the right.*/
+ }
+
+/* +++++++++++++ */
+/* FLEX Property - Items will become responsive ++++++++ */
+/*
+* Flex will allocate space for all items width. Fill the whole container if chose all DIV.
+* They grow and shrink together.
+*/
+.container > div {
+/*code above will choose all DIV element*/
+/*flex: 1;*/
+}
+.container > .search2 {
+	/*flex: 2;*/
+}
+/*FLEX TUTORIAL++++++++++++++++++
+flex-grow default - 0
+flex-shrink default - 1
+flex-basis -
+
+.home {
+flex: 1 1 200px
+}
+.logout {
+ flex: 10 1 200px
+}
+ */
+/* +++++++++++++ */
+
+/*CROSS AXIS CODES*/
+
+.container {
+
  }
 
 
-/*Div box Colors*/
 
-.color1 {
-background-color: lightyellow;
+
+
+
+
+
+
+
+/* ORDER - FLEXBOX TUTORIAL ++++ */
+/*
+order - default value 0
+Put 1 && >1 value and above and item will move to the end.
+
+.home1 {
+	order: 1;
 }
-
-.color2 {
-  background-color: lightblue;
+.search2 {
+	order: 0;
 }
-
-.color3 {
-  background-color: lime;
+.logout3 {
+	order: -1;
 }
-
-.color4 {
-  background-color: darkorange;
-}
-
-div {
-  border: 2px solid black;
-  /*width: 10%;*/
- padding: 1em;
-  /*align-items: baseline;*/
-}
-
-section {
-  height: 200px;
-  width: 100%;
-  background-color: cyan;
-  /*display: flex;*/
-
-  /*flex-direction: row;*/
-  /*flex-direction: row-reverse;*/
-  /*flex-direction: column;*/
-  /*flex-direction: row-reverse;*/
-
-  /*justify-content: flex-start;*/
-  /*justify-content: flex-end;*/
-	/*justify-content: center;*/
-	/*justify-content: space-between;*/
-	/*justify-content: space-around;*/
-	/*justify-content: space-evenly;*/
-}
+ */
 
 
+/*.container > div {*/
+/* width: 300px;}*/
+
+
+/*.logout {*/
+/*align-self: flex-start;*/
+/*}*/
+
+/*.home {*/
+/*align-self: flex-end;*/
+/*}*/
+
+/*.logout {*/
+/* flex: 1;*/
+/* }*/
+/*margin-left: auto;
+
+/*.search {*/
+/*!* margin-left: auto;*!*/
+/* }*/
+
+/* .home {*/
+/* flex: 1;*/
+/* }*/
+/*!* margin-right: auto;*!*/
+/*!*	!*!*margin-left: auto;*!*!*!*/
+
+/*.container > div {*/
+/*flex: 1;*/
+/* width: 33.33px;*/
+/*}*/
+
+/*.container > .search {*/
+/*flex: 2;*/
+/*} !* select search. more specific.*/
