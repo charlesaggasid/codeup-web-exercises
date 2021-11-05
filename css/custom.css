@@ -1,0 +1,17 @@
+.pizza-img-text-container {
+	margin-top: 20px;
+}
+
+#main-container {
+	background-image: url("/img/pizza.png");
+	
+}
+
+.welcome-pizza-img {
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	text-shadow: #333333;
+	background-color: white;
+	opacity: 60%;
+}
