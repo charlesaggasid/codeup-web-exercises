@@ -128,23 +128,23 @@
 //
 // 	console.log(area);
 	
-	var products = [
-		{
-			name: 'Playstation 5',
-			price: 599.99
-		}, {
-			name: 'Logitech Wireless Mouse',
-			price: 23.99
-		}, {
-			name: 'Macbook Pro',
-			price: 1099.99
-		}, {
-			name: 'GoPro HERO10',
-			price: 399.99
-		}, {
-			name: '12" & 6" Metal Ruler Set',
-			price: 5.99
-		}]
+	// var products = [
+	// 	{
+	// 		name: 'Playstation 5',
+	// 		price: 599.99
+	// 	}, {
+	// 		name: 'Logitech Wireless Mouse',
+	// 		price: 23.99
+	// 	}, {
+	// 		name: 'Macbook Pro',
+	// 		price: 1099.99
+	// 	}, {
+	// 		name: 'GoPro HERO10',
+	// 		price: 399.99
+	// 	}, {
+	// 		name: '12" & 6" Metal Ruler Set',
+	// 		price: 5.99
+	// 	}]
 		
 	// 	function sortByName(arr) {
 	// 		return arr.sort(function (a, b)) {
@@ -158,6 +158,50 @@
 	//
 	// console.log(sortByName(products))
 	//
+	
+	var bBallPlayers = [
+		{
+			name: "Hakeem Olajuwon",
+			height: 213
+		}, {
+			name: "Muggsy Bogues",
+			height: 160
+		}, {
+			name: "Chris Paul",
+			height: 183
+		}, {
+			name: "Bol Bol",
+			height: 218
+		}, {
+			name: "Moochie Norris",
+			height: 185
+		}, {
+			name: "Manu Ginobili",
+			height: 198
+		}
+	];
+	
+	
+	
+	const obj = {
+		name: 'Jean-Luc Picard',
+		rank: 'Captain'
+	};
 
+// Prints "name Jean-Luc Picard" followed by "rank Captain"
+	Object.keys(obj).forEach(key => {
+		console.log(key, obj[key]);
+	});
+	
+
+	function random(answer) {
+		return loveMeorHateMe[Math.floor(Math.random() * loveMeorHateMe.length)];
+	}
+	
+	const loveMeorHateMe = ["Yes", "No"]
+	console.log(random(loveMeorHateMe))
+	
+	
+	
 
 })();
