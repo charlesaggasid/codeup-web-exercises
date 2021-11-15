@@ -7,14 +7,14 @@
 </head>
 <body>
 
-<h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
+<h2 id="message">This BOM will self destruct in <span id="timer">10000</span> seconds...</h2>
 <button id="defuser">Defuse the BOM</button>
 
 <script>
 	(function() {
 		"use strict";
 
-		var detonationTimer = 5;
+		var detonationTimer = 10000;
 
 		// TODO: This function needs to be called once every second
 		setInterval(function updateTimer() {
@@ -42,6 +42,14 @@
 		var defuser = document.getElementById('defuser');
 		defuser.addEventListener('click', defuseTheBOM);
 	})();
+
+	var i = 0;
+	while(i > 10) {
+		console.log(i);
+		i++;
+	}
+	console.log(i)
+
 </script>
 </body>
 </html>
