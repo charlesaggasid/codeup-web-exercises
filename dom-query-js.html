@@ -7,6 +7,8 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+<button id="btn-main-header-el">Click me: "Hello World" to "Javascript is Cool"</button>
+
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -14,7 +16,12 @@
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
+<button id="toRed">Click me toRed</button>
+<br>
+<button id="toBlue">Click me toblue</button>
+
 <h2 id="sub-header">Hello Again.</h2>
+<button id="change-to-blue-btn">Click me! H2 to Blue</button>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -24,56 +31,70 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<button id="paragraph-btn-text-replace">Try click this.</button>
 
 <script>
     (function() {
 	    "use strict";
 	    // TODO: Uncomment next line and get the main header element by id
-	    var mainHeader = document.getElementById("main-header");
-
 	    // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-	    mainHeader.textContent = "Javascript is Cool"
+	    var mainHeaderEl = document.getElementById("main-header");
+			var btnH1TextChanger = function () {
+				mainHeaderEl.textContent = "Javascript is Cool"
+			}
+	    document.getElementById("btn-main-header-el").addEventListener('click', btnH1TextChanger)
+
 
 	    // TODO: Uncomment the next line and get the sub header element by id
-	    var subHeader = document.getElementById("sub-header");
-
 	    // TODO: Set the text color of subHeader to blue
-	    subHeader.style.color = "blue"
+	    var subHeaderEL = document.getElementById("sub-header");
+		 var btnChangeToBlue = function () {
+			 subHeaderEL.style.color = "blue"
+		 }
+		 document.getElementById('change-to-blue-btn').addEventListener('click', btnChangeToBlue)
+
+
 
 	    // TODO: Uncomment the next line and get all list items
+	    // TODO: Set text color on every other list item to red
 	    var listItems = document.getElementsByTagName("li")
-	    for (let i = 0; i < listItems.length; i++) {
 
-	    }
-
-	    // TODO: Set text color on every other list item to grey
-	    for (let i = 0; i < listItems.length; i++) {
-		    if (i % 2 === 0) {
-			    listItems[i].style.color = "grey"
+	    var btnChangeToRed2 = function() {
+		    for (let i = 0; i < listItems.length; i++) {
+			    if (i % 2 === 0) {
+				    listItems[i].style.color = "red"
+			    }
 		    }
 	    }
+		document.getElementById('toRed').addEventListener('click', btnChangeToRed2)
 
 	    // TODO: Set text color of li with dbid = 1 to blue
-	    for (var i = 0; i <listItems.length; i++) {
-	         var dbId = 1
-		    if(listItems[i].getAttribute("data-dbid") == 1)
-			    listItems[i].style.color = "blue"
-		   }
+	    var btnChangeToBlue2 = function() {
+		    for (var i = 0; i < listItems.length; i++) {
+			    var dbId = "1"
+			    if (listItems[i].getAttribute("data-dbid") == 1)
+				    listItems[i].style.color = "blue"
+		    }
+	    }
+	    document.getElementById('toBlue').addEventListener('click', btnChangeToBlue2)
+
+
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
-        var subPara = document.getElementsByClassName("sub-paragraph")
-         for (var i=0; i<subPara.length; i++) {
-	       subPara[i].innerHTML ="Mission Accomplished"
-         }
-
-
-
 	    // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-	    // for(i=0; i<subParagraphs.length; i++){
-	    //      subParagraphs[i].
-	    //  }
+        let subParaEl = document.getElementsByClassName("sub-paragraph")
+
+         var paraBtnChange = function() {
+	         for (let i = 0; i < subParaEl.length; i++) {
+		         subParaEl[i].innerHTML = "Mission Accomplished"
+	         }
+         }
+         document.getElementById('paragraph-btn-text-replace').addEventListener('click', paraBtnChange)
 
     })();
+
+    // Returns a random integer between min and max.
+
 </script>
 </body>
 </html>
