@@ -14,14 +14,32 @@
 
 	img {
 		display: none;
-		width: 100%;
-		height: 100%;
+		margin-left: 25%;;
+		width: 50%;
+		height: 50%;
 	}
 
 	#enter-cheat-code {
 		display: none;
+
+		font-size: 64px;
 		text-align: center;
 	}
+
+	#keep-typing {
+		display: none;
+		font-size: 64px;
+		color: red;
+	}
+
+	#wrong-code {
+		display: none;
+		font-size: 64px;
+		color: red;
+	}
+
+
+
 
 	</style>
 </head>
@@ -29,11 +47,12 @@
 
 
 <button id="click-me">Click me</button>
-<p id='enter-cheat-code'>Know any CHEAT codes?</p>
+<p id='enter-cheat-code'>Type in your Code.</p>
 <img src="/img/konami-large.jpg" alt="">
+<h1 id="keep-typing">Keep typing..</h1>
+<h1 id="wrong-code">Wrong code...</h1>
 
 
-<h1 id="key-pressed"></h1>
 
 
 

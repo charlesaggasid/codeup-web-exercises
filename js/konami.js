@@ -62,6 +62,9 @@ function activateCheats() {
 	// var audio = new Audio()
 	// audio.play();
 	alert('cheats activated')
+	$('img').hide('slow');
+	$('#enter-cheat-code').hide('slow');
+	$('keep-typing').hide('fast');
 }
 
 //Click here
@@ -72,7 +75,26 @@ $('#click-me').click(function () {
 	$('#enter-cheat-code').show('slow');
 });
 
-$('')
+$(document).ready(function() {
 
+	$('html').keydown(function(e){
+	var key = allowedKeys[e.keyCode]
+	var required = konamiCode[konamiCodePosition]
+	if (key === required) {
+		$('html').css('background-color', 'lightgreen' );
+		$('#keep-typing').show('fast');
+		// konamiCodePosition++;
+	} else {
+		$('html').css('background-color', 'red');
+		$('keep-typing').hide('fast');
+		$('wrong-code').show('fast');
+		
+		
+	}
+	});
+})
+
+// $('html').keyup(function(){
+// 	$('html').css('background-color', 'white') })
 
 
