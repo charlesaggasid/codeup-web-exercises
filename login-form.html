@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
+<h1 style="text-align: center">JS Login Form Validation</h1>
 <main>
     <form action="#">
         <fieldset class="width-80">
@@ -21,5 +22,24 @@
         </fieldset>
     </form>
 </main>
+
+	<script>
+
+	var username = 'regulus2021'
+var password = 'gocodeup'
+	function validateCredentials() {
+		var username = document.getElementById('username').value;
+		var password = document.getElementById('password').value;
+		if(username === 'regulus2021' && password === 'gocodeup') {
+		alert('Success!');
+		} else {
+		if(username !== username && password !== password);
+		alert('Wrong password')
+		}
+	}
+
+	</script>
+
+
 </body>
 </html>
