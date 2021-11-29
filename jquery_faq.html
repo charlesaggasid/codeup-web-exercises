@@ -16,12 +16,24 @@
 		p,
 		dt {
 			font-weight: bold;
+
+
 			}
 
 		dl,
 		dd {
 			font-size: .9rem;
 			}
+
+			.example {
+				font-weight: bold;
+			}
+
+		.bg-yellow {
+		background-color: yellow;
+		}
+
+
 	</style>
 </head>
 <body>
@@ -63,19 +75,64 @@
 	<dt>DOES THE ZOO HAVE A LOST AND FOUND?</dt>
 	<dd class="invisible toHide">Guests to San Antonio Zoo are asked to claim or report lost items at Guest Relations located by our ticket booths. Guest can also email San Antonio Zoo at information@sazoo.org to inquire about a lost items. Kiddie Park ride attendants are not responsible for articles left on ride platforms. San Antonio Zoo is not responsible for lost or damaged articles.</dd>
 
-	<dt>DOES THE ZOO CLOSE DUE TO INCLEMENT WEATHER?</dt>
+	<dt class="toggleForHideShow " >DOES THE ZOO CLOSE DUE TO INCLEMENT WEATHER?</dt>
 	<dd class="invisible toHide">San Antonio Zoo is open rain or shine unless the severity of the weather poses a threat to the safety of our guests and staff. If we do close due to inclement weather we will post the news on our website and San Antonio Zoo’s social media accounts. We do not offer refunds due to inclement weather, however, we can reschedule your tickets. Please email us at information@sazoo.org with RESCHEDULE TICKETS in the subject line. Please make sure to provide your order number.</dd>
 
-	<a href="#" id="toggleForHideShow">Click me</a>
+	<a href="#" class="toggleForHideShow">Click me</a>
 </dl>
+
+<h1>Park List</h1>
+<h3>Park 1</h3>
+	<ul class="park1-class">
+		<li>Fact 1</li>
+		<li>Fact 2</li>
+		<li>Fact 3</li>
+		<li>Fact 4</li>
+	</ul>
+
+<h3>Park 2</h3>
+<ul class="park2-class">
+	<li>Fact 1</li>
+	<li>Fact 2</li>
+	<li>Fact 3</li>
+	<li>Fact 4</li>
+</ul>
+
+<h3>Park 3</h3>
+<ul class="park3-class">
+	<li>Fact 1</li>
+	<li>Fact 2</li>
+	<li>Fact 3</li>
+	<li>Fact 4</li>
+</ul>
+
+<button class="liBgYellow">Click me: Turn last LI background to yellow.</button>
+<br>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin=“anonymous"></script>
 <script>
 	$(document).ready(function() {
-		$('#toggleForHideShow').click(function(event) {
+		$('.toggleForHideShow').click(function(event) {
 			event.preventDefault();
 			$('.toHide').toggleClass('invisible');
 		});
+
+	$('h3').click(function() {
+		$('li').each(function () {
+			$(this).toggleClass('example');
+		});
+	});
+
+	$('.liBgYellow').click(function() {
+		$('ul').each(function () {
+			$(this).children('li').last('li').toggleClass('bg-yellow');
+		});
+	});
+
+	});
+
+	$('li').click(function() {
+		$(this).parent('ul').children('li').first('li').css('color', 'blue')
 	});
 </script>
 </body>
