@@ -88,11 +88,12 @@ $(document).ready(function() {
 		$('html').css('background-color', 'red');
 		$('keep-typing').hide('fast');
 		$('wrong-code').show('fast');
-		
-		
 	}
 	});
 })
+
+
+
 
 // $('html').keyup(function(){
 // 	$('html').css('background-color', 'white') })

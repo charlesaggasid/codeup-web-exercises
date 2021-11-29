@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+
+		.invisible {
+		visibility: hidden;
+		}
+
+		.output {
+			font: 1rem 'Fira Sans', sans-serif;
+			}
+
+		p,
+		dt {
+			font-weight: bold;
+			}
+
+		dl,
+		dd {
+			font-size: .9rem;
+			}
+	</style>
+</head>
+<body>
+<h3>ZOO FAQS</h3>
+
+<dl>
+	<dt>SOCIAL DISTANCING & SAFETY GUIDELINES</dt>
+	<dd class="invisible toHide">
+		Masks are recommended indoors.
+	</dd>
+
+	<dt>WHEN DOES THE ZOO OPEN?</dt>
+	<dd class="invisible toHide">Click here for daily hours and a calendar of events.</dd>
+
+
+	<dt>WHERE IS THE BEST PLACE TO PARK?</dt>
+	<dd class="invisible toHide">Planning a visit to the zoo? Check out the map below for available parking areas in and around Brackenridge Park and the new Zoo Parking Garage! The Zoo Parking Garage is located in between the zoo and Will Smith Zoo School. Parking at the garage is free during zoo business hours.</dd>
+
+
+	<dt>AM I ALLOWED TO BRING FOOD AND DRINKS INTO THE ZOO?</dt>
+	<dd class="invisible toHide">Outside food or drink is not allowed into the zoo. Exceptions are: bottled water, baby food, and formula. Ice chests, coolers, and ice bags are not allowed on zoo grounds.</dd>
+
+
+	<dt>ARE STARBUCKS PRODUCTS ALLOWED IN THE ZOO?</dt>
+	<dd class="invisible toHide">Starbucks products are allowed in San Antonio Zoo.</dd>
+
+	<dt>ARE PETS ALLOWED?</dt>
+	<dd class="invisible toHide">Unfortunately, due to state and federal regulations, your furry friends are not allowed into the zoo, however, service animals are welcome on zoo grounds under the care of their owner. San Antonio Zoo asks that all guests with service animals check in with our Guest Experience office (located at the main entrance to the right of the ticket booths) for a check-in process.</dd>
+
+
+	<dt>WHAT IS SAN ANTONIO ZOO'S PHOTO POLICY?</dt>
+	<dd class="invisible toHide">During your visit to the zoo, you may have been filmed or photographed. Your admission to the zoo serves as permission for use of these images. The commercial use of photographs, video, and film you may have taken during your visit is strictly prohibited without the express written consent of San Antonio Zoo.</dd>
+
+
+	<dt>WHAT ARE RANDOM BAG CHECKS?</dt>
+	<dd class="invisible toHide">For the safety of our guests, zoo crew, and animals, our Zoo Ranger team reserves the right to inspect packages, bags and containers at Entry Point.</dd>
+
+
+	<dt>DOES THE ZOO HAVE A LOST AND FOUND?</dt>
+	<dd class="invisible toHide">Guests to San Antonio Zoo are asked to claim or report lost items at Guest Relations located by our ticket booths. Guest can also email San Antonio Zoo at information@sazoo.org to inquire about a lost items. Kiddie Park ride attendants are not responsible for articles left on ride platforms. San Antonio Zoo is not responsible for lost or damaged articles.</dd>
+
+	<dt>DOES THE ZOO CLOSE DUE TO INCLEMENT WEATHER?</dt>
+	<dd class="invisible toHide">San Antonio Zoo is open rain or shine unless the severity of the weather poses a threat to the safety of our guests and staff. If we do close due to inclement weather we will post the news on our website and San Antonio Zoo’s social media accounts. We do not offer refunds due to inclement weather, however, we can reschedule your tickets. Please email us at information@sazoo.org with RESCHEDULE TICKETS in the subject line. Please make sure to provide your order number.</dd>
+
+	<a href="#" id="toggleForHideShow">Click me</a>
+</dl>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin=“anonymous"></script>
+<script>
+	$(document).ready(function() {
+		$('#toggleForHideShow').click(function(event) {
+			event.preventDefault();
+			$('.toHide').toggleClass('invisible');
+		});
+	});
+</script>
+</body>
+</html>
