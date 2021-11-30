@@ -132,7 +132,7 @@
 	});
 
 	$('li').click(function() {
-		$(this).parent('ul').children('li').first('li').css('color', 'blue')
+		$(this).parent().children().first().css('color', 'blue')
 	});
 </script>
 </body>
