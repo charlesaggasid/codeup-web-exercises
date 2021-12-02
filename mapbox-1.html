@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+	<title>Mapbox 1</title>
+</head>
+<body>
+
+<h1>MapBox One(1)</h1>
+<script src="js/keys.js"></script>
+<div id='map' style='width: 600px; height: 500px;'></div>
+
+<!--//TODO: Mini exercise #1 - Create an HTML file named mapbox-1.html. Create a map that is centered at the San Antonio Airport with the zoom set to 12.-->
+<!--//TODO: After 5 seconds, use a method found in the documentation to fly to the DFW Airport and change the map style to satellite streets.-->
+<!--//*BONUS* Create a button labeled "Zoom In", and when the button is clicked, increases the zoom value by 1.-->
+
+<script>
+
+	mapboxgl.accessToken = mapKey;
+	const map = new mapboxgl.Map({
+		container: 'map', // container ID
+		style: 'mapbox://styles/mapbox/streets-v11', // style URL
+		center: [-98.4705425, 29.5311973], // starting position [lng, lat]
+		zoom: 12 // starting zoom
+	});
+
+var interval = setInterval(zoomToDFW, 5000)
+function zoomToDFW() {
+	map.flyTo({
+		style: 'mapbox:styles/mapbox/satellite-streets-v11',
+		center: [-97.0433284, 32.90004],
+		zoom: 12
+	});
+	clearInterval(interval);
+}
+
+	var zoom = {zoom: 1}
+	document.getElementById("zoom").addEventListener("click", function() {
+
+	});
+
+
+</script>
+
+var zoom =
+<button id="zoom">Click to zoom</button>
+
+</body>
+</html>
