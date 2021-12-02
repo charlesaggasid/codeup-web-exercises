@@ -1,13 +1,15 @@
 [
     {
         "title": "Hammer",
+        "availability": "available",
         "quantity": 25,
         "categories": [
             "tool"
         ],
         "price": 20
     }, {
-        "title": "Drill",
+        "title": "power drill",
+        "availability": "available",
         "quantity": 5,
         "categories": [
             "tool",
@@ -16,19 +18,30 @@
         "price": 100
     }, {
         "title": "Mower",
+    "availability": "available",
         "quantity": 5,
         "categories": [
-            "tool",
-            "gas",
+            "tool" ,
+            "gas" ,
             "outdoor"
         ],
         "price": 200
     }, {
         "title": "Screwdrivers",
+    "availability": "not available",
         "quantity": 25,
         "categories": [
             "tool"
         ],
         "price": 10
+    }, {
+    "title": "Nail",
+    "availability": "available",
+    "quantity":30,
+    "categories": [
+        "small items"
+    ],
+    "price": 10
     }
+
 ]
