@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Charles Map</title>
+<!--Mapbox-->
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+<!--Geocoder-->
+	<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+	<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+</head>
+<body>
+<style>
+
+body {
+	background-color: mintcream;
+	color: black;
+}
+	#menu {
+		background: #efefef;
+		padding: 10px;
+		font-family: 'Open Sans', sans-serif;
+		}
+	/*	marker for house*/
+	.houseMarker {
+		background-image: url('/img/mapbox.png');
+		background-size: cover;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		cursor: pointer;
+		}
+/*	marker for restaurants*/
+	.restaurantMarker {
+		background-image: url('/img/restaurants.png');
+		background-size: cover;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		cursor: pointer;
+		}
+/*Popup styles*/
+	.mapboxgl-popup {
+		max-width: none;
+		}
+
+	.mapboxgl-popup-content {
+		text-align: center;
+		font-family: 'Open Sans', sans-serif;
+
+		}
+
+</style>
+
+<h1 STYLE="font-family: 'Roboto', sans-serif;
+text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);
+">MAPBOX</h1>
+
+<p>Choose Zoom</p>
+<!--zoom Level option-->
+<label for="zoomOptions">Zoom Level
+	<select id="zoomOptions">
+		<option value="5">5</option>
+		<option value="10">10</option>
+		<option value="18">18</option>
+	</select>
+</label>
+
+<!--Map Div-->
+<div id='map' style='width: 600px;
+height: 500px; margin-top: 10px;
+border: 2px solid red;'></div>
+<!--Scripts-->
+<script src="js/keys.js"></script>
+<script src="js/mapbox_maps_api.js"></script>
+</body>
+</html>

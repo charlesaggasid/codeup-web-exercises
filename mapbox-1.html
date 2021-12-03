@@ -26,25 +26,19 @@
 		zoom: 12 // starting zoom
 	});
 
-var interval = setInterval(zoomToDFW, 5000)
-function zoomToDFW() {
+
+setTimeout(function() {
 	map.flyTo({
-		style: 'mapbox:styles/mapbox/satellite-streets-v11',
 		center: [-97.0433284, 32.90004],
 		zoom: 12
 	});
-	clearInterval(interval);
-}
-
-	var zoom = {zoom: 1}
-	document.getElementById("zoom").addEventListener("click", function() {
-
-	});
+	map.setStyle('mapbox:styles/mapbox/satellite-streets-v11')
+}, 1000);
 
 
 </script>
 
-var zoom =
+
 <button id="zoom">Click to zoom</button>
 
 </body>

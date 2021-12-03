@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+	<title>Mapbox 2</title>
+</head>
+<body>
+
+<h1>MapBox One(2)</h1>
+<script src="js/keys.js"></script>
+<div id='map' style='width: 600px; height: 500px;'></div>
+
+<!--// Mini Exercise 2-->
+<!--// Create an HTML file called mapbox-2.html. In this file, create a map centered-->
+<!--// on New York with a marker on the Statue of Liberty. Add a popup to the Statue of-->
+<!--// Liberty marker with the text "Statue of Liberty".-->
+<!--// *BONUS - when the marker is dragged and released, display the coordinates in an H1 below the map.-->
+
+<script>
+
+	mapboxgl.accessToken = mapKey;
+	const map = new mapboxgl.Map({
+		container: 'map', // container ID
+		style: 'mapbox://styles/mapbox/streets-v11', // style URL
+		center: [-74.0447337, 40.6892785], // starting position [lng, lat]
+		zoom: 19 // starting zoom
+	});
+
+	// MARKERS
+
+	//Instantiate a new Marker Object
+	var statue = new mapboxgl.Marker()
+	  .setLngLat([-74.0447337, 40.6892785])
+	   addTo(map)
+	//Popup
+	var statuePopup = new mapboxgl.Popup()
+	.setLngLat(statue.getLngLat())
+	.setHTML('<p>Hi</p>')
+	.addTo(map)
+
+
+statue.on('dragend', function() {
+
+})
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
