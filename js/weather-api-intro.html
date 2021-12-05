@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<h1>Weather</h1>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin=“anonymous"></script>
+<script src="keys.js"></script>
+<script>
+	$.get("https://api.openweathermap.org/data/2.5/onecall?lat=29.491915891899012&lon=-98.5159441069922&appid=" + openWeatherKey).done(function(data) {
+		console.log(data)
+	});
+
+	$.get("https://api.openweathermap.org/data/2.5/onecall", {
+		lat: 29.491915891899012,
+		lon: 98.5159441069922,
+		exclude: 'minutely, hourly',
+		units: 'imperial',
+		APPID: openWeatherKey
+	}).done(function(data) {
+		console.log(data)
+	});
+
+</script>
+</body>
+</html>
