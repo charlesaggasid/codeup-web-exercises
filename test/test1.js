@@ -12,7 +12,7 @@ $(document).ready(function () {
 			/********** DO SOMETHING WITH THE DATA PLEASE BE CREATIVE IF CAN ***********/
 			console.log(data);
 			
-			$('.weather-div').html('');
+			$('.four-days').html('');
 			/*LOOP 5 TIMES*/
 			for (let i=1; i<5; i++){
 				const {timezone} = data;

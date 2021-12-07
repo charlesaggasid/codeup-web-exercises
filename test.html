@@ -11,13 +11,12 @@
 	      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 	<!-- Custom CSS -->
 	<style>
-
 	body {
 		/*margin-left: 200px;*/
+		/*background-image: url("https://source.unsplash.com/1600x900/?landscape");*/
 	}
 		.flex{
 		display: flex;
-
 		/*flex-direction: column;*/
 		align-content: space-around;
 		border: solid 1px red;
@@ -25,16 +24,13 @@
 		/*margin-left: 330px;*/
 		/*margin-right: 380px;*/
 		}
-
 		#map {
 			width: 1500px;
 			height: 500px;
 		}
 	</style>
-
 </head>
 <body>
-
 <nav class="navbar bg-primary">
 	<a class="markerLoc" style="color: #1d1938"></a>
 	<form class="form-inline">
@@ -42,30 +38,14 @@
 		<button class="submit-search" type="submit">Search</button>
 	</form>
 </nav>
-
-<div>
-	<h1>Weather App</h1>
-</div>
-
-
+<div><h1>Weather App</h1></div>
 
 <div class="flex">
 <div style="display: flex" class="weather-div card weather loading current">
 </div>
 <div class="four-days" style="display: flex">
-<!--	<h3 class="timezone">Weather in Honolulu</h3>-->
-<!--	<h1 class="temp">51°C</h1>-->
-<!--	<h5 class="max-min">H:79° | L:68°</h5>-->
-<!--	<div class="flex">-->
-<!--		<img src="https://openweathermap.org/img/wn/04n@2x.png" alt="" class="icon">-->
-<!--		<div class="description">Cloudy</div>-->
-<!--	</div>-->
-<!--	<div class="humidity">Humidity: 60%</div>-->
-<!--	<div class="wind">Wind speed: 6.2 km/h</div>-->
 </div>
 </div>
-
-
 
 <!--MapBox Container-->
 <div id='map'></div>

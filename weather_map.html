@@ -1,68 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-	<title>Title</title>
-	<!-- Bootstrap CSS -->
+	<title>Weather Web App</title>
+	<!-- Mapbox Script and CSS -->
+	<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet'/>
+	<!--	Bootstrap-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
 	      integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-	<link rel="stylesheet" href="">
-	<!-- Mapbox urls -->
-	<script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
-	<link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
-<!--	Own CSS-->
-	<link rel="stylesheet" href="css/weather-map.css">
-
+	<!-- Custom CSS -->
+	<style>
+		body {
+			/*margin-left: 200px;*/
+			/*background-image: url("https://source.unsplash.com/1600x900/?landscape");*/
+			}
+		.flex{
+			display: flex;
+			/*flex-direction: column;*/
+			align-content: space-around;
+			border: solid 1px red;
+			/*width: 1000px;*/
+			/*margin-left: 330px;*/
+			/*margin-right: 380px;*/
+			}
+		#map {
+			width: 1500px;
+			height: 500px;
+			}
+	</style>
 </head>
-
 <body>
+<nav class="navbar bg-primary">
+	<a class="markerLoc" style="color: #1d1938"></a>
+	<form class="form-inline">
+		<input class="search" type="search" placeholder="ex. London" aria-label="Search">
+		<button class="submit-search" type="submit">Search</button>
+	</form>
+</nav>
+<div><h1>Weather App</h1></div>
 
-<h1>Weather:</h1>
-
-<div class="card">
-	<div class="search">
-		<input type="text" class="search-bar" placeholder="City">
-		<button><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1.5em"
-		             width="1.5em" xmlns="http://www.w3.org/2000/svg">
-			<path
-			  d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z">
-			</path>
-		</svg></button>
+<div class="flex">
+	<div style="display: flex" class="weather-div card weather loading current">
 	</div>
-	<div class="weather loading">
-		<h3 class="city">Weather in Denver</h3>
-		<h1 class="temp">51°C</h1>
-		<h5 class="max-min">H:79° | L:68°</h5>
-		<div class="flex">
-			<img src="https://openweathermap.org/img/wn/04n@2x.png" alt="" class="icon">
-			<div class="description">Cloudy</div>
-		</div>
-		<div class="humidity">Humidity: 60%</div>
-		<div class="wind">Wind speed: 6.2 km/h</div>
+	<div class="four-days" style="display: flex">
 	</div>
 </div>
 
-<div id='map' style='width: 600px; height: 500px;'></div>
+<!--MapBox Container-->
+<div id='map'></div>
 
-<!--jQuery-->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-<!--BS-->
+<script src="js/keys.js"></script>
+<!--bootstrap and jquery-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
         crossorigin="anonymous"></script>
-<!--API keys-->
-<script src="js/keys.js"></script>
-<script src="js/mapbox-geocoder-utils.js"></script>
-<!--Googled cook to own SCRIPTs-->
-<script src="js/weather-map.js" defer></script>
-
+<script src="/js/mapbox-geocoder-utils.js"></script>
+<!-- Custom JS -->
+<script src="test/test1.js"></script>
 </body>
-
 </html>
