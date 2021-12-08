@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<h1>ES6</h1>
+
+
+<script>
+let scores = [80, 90, 70]
+for(let score of scores){
+	score = score+5;
+	console.log(score)
+}
+
+let add = (n1,n2) => n1+n2;
+console.log(add(1,2));
+// no  need return if one line return
+
+let multiplyTwoNumbers = (n1, n2) => n1*n2;
+console.log(multiplyTwoNumbers(4,3));
+
+// with object need return and curly braces
+
+const ball = name => {
+	return{name, height:84}
+};
+
+console.log(ball("Saul").name);
+
+
+</script>
+</body>
+</html>
