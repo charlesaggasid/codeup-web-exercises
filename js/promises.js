@@ -1,14 +1,9 @@
 "use strict";
 
 /** Exercises
-Write a function named wait that accepts a number as a parameter, and returns a promise that resolves after the passed number of milliseconds.
-
-wait(1000).then(() => console.log('You\'ll see this after 1 second'));
-wait(3000).then(() => console.log('You\'ll see this after 3 seconds'));
 1. As a bonus make sure the promise resolves with the milliseconds in return, so you can make the console log message more dynamic.**/
 
 //Create a function that accepts a GitHub username, and returns a promise that resolves returning just the date of the last commit that user made. Reference the github api documentation to achieve this.
-
 function getDateOfLastCommit(username) {
 	const GITHUB_URL_config_with_fetch = fetch(`https://api.github.com/users/${username}/events/public`, {headers: {'Authorization': `token ${GITHUB_KEY}`}});
 	
@@ -18,14 +13,28 @@ function getDateOfLastCommit(username) {
 			return data.json();
 	}).then(jsonData => {
 			console.log(jsonData);
-			let createdDate = new Date(`${jsonData[0].created_at}`) .toDateString()
+			let createdDate = new Date(`${jsonData[0].created_at}`).toDateString()
 			return `Last date commit is: ${createdDate}  user name is: ${jsonData[0].actor.display_login}`
 	}).catch(err => console.log(err))
 }
 getDateOfLastCommit('charlesaggasid')
 .then(data => console.log(data));
 
+// Write a function named wait that accepts a number as a parameter, and returns a promise that resolves after the passed number of milliseconds.
 
+
+function wait(seconds) {
+	return new Promise((resolve, reject) => {
+		setTimeout(() => {
+			if (Math.random() > 0.4) {
+				resolve('Problem resolved');
+			}else{
+		}   reject('Erro 404')
+		}, seconds)
+	});
+}
+wait(1000).then(() => console.log('You\'ll see this after 1 second'));
+wait(3000).then(() => console.log(`You'll see this after 3 seconds`));
 
 
 
@@ -75,8 +84,9 @@ Promise.resolve('one').then((one) => {
 });
 
 /**FETCHING WITH DATA AND DO SOMETHING WITH THE DATA DISPLAYING USER**/
-fetch('https://api.github.com/users').then( response => {
-	response.json().then( users => {
+fetch('https://api.github.com/users')
+.then( response => {
+		response.json().then( users => {
 		users.forEach( user => {
 			// do something with each user object...
 			// console.log(user);

@@ -1,151 +1,90 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Ajax Blog</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Online Store</title>
+	<!--    CSS-->
 	<style>
+		h1 {
+			text-align: center;
+			}
+
+		table, tr, th {
+			margin: auto;
+			border: 1px solid lightpink;
+			padding: 20px;
+			background-color: mintcream;
+			}
+
+		table {
+			border-spacing: 20px;
+			}
+
+		button {
+			display: flex;
+			margin: auto;
+			margin-top: 2em;
+			}
+
 		body {
-			background: forestgreen;
-			margin: 15px 0 0 0;
-			}
-		#posts {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			}
-		.blogs {
-			margin: 15px auto;
-			}
-		.scrollable {
-			overflow-y: auto;
-			height: 890px;
-			}
-		.scrollable::-webkit-scrollbar{
-			background: #0fb784;
-			}
-		.scrollable::-webkit-scrollbar-thumb{
-			background: #4f82fb;
-			border-radius: 100px;
-			}
-		.main {
-			background: darkseagreen;
-			width: 700px;
-			margin: 15px auto;
-			border: 3px solid black;
-			border-radius: 25px 0 0 25px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			height: 900px;
-			flex-direction: column;
-			padding: 15px;
-			}
-		.loading {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			}
-		.hidden {
-			display: none;
-			}
-		#loading {
-			z-index: 1000;
-			align-self: center;
-			justify-self: center;
-			position: absolute;
+			background-color: lightgoldenrodyellow;
 			}
 	</style>
+	<!--HTML-->
 </head>
 <body>
 
-<h1 class="text-center">My Blog</h1>
-
-<div class="main">
-
-	<div id="loading" class="spinner-grow text-primary hidden" style="width: 10rem; height: 10rem;" role="status">
-		<span class="sr-only">AJAX...</span>
-	</div>
-
-	<div class="scrollable" id="posts"></div>
+<h1>My Blog Posts</h1>
+<div id="posts">
+	<table id="posting">
+		<thead>
+		<tr>
+			<th>Title</th>
+			<th>Content</th>
+			<th>Categories</th>
+			<th>Date</th>
+		</tr>
+		</thead>
+		<tbody id="insertPosts"></tbody>
+	</table>
 </div>
+<button id="refresh" type="button">refresh</button>
 
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="js/jquery-2.2.4.js"></script>
+<!--JavaScript-->
 <script>
-	$(document).ready(function(){
+	(function() {
 		"use strict";
 
-		setInterval(refreshAjax, 15000);
+		$(document).ready(function (){
+			$.get("data/blog.json")
+			  .done(handlerResponse);
+		})
 
-		function refreshAjax() {
+		function handlerResponse(posts) {
+			let html = "";
+			console.log(posts);
+			posts.forEach(function (post){
+				html += "<tr>"
+				html += "<th>" + post.title + "</th>"
+				html += "<th>" + post.content + "</th>"
+				html += "<th>" + post.categories + "</th>"
+				html += "<th>" + post.date + "</th>"
+				html += "</tr>"
 
-			// $('#posts').toggle('hidden')
-			$('#loading').toggle('hidden')
-
-			const ajaxRequest = $.ajax('data/blog.json')
-
-			ajaxRequest.done(function (data) {
-				buildHTML(data)
-			})
-
-			ajaxRequest.fail(function (jqHxr, status, error) {
-				console.log(jqHxr);
-				console.log(status);
-				console.log(error);
-			})
-
-			refresh()
+			});
+			$("#insertPosts").html(html);
 		}
 
-		refreshAjax()
+		$("#refresh").click(function (){
+			$.get("data/blog.json")
+			  .done(handlerResponse);
+		})
 
-		function refresh(){
-			setTimeout(function(){
-				$('#loading').toggle('hidden')
-				// $('#posts').toggle('hidden')
-			}, 1000)
-		}
+	})();
 
 
-		function buildHTML(object){
-			let newHTML = "";
-
-			object.forEach(function(thing){
-				newHTML += "<div class='card blogs' style='width: 85%;max-width: 650px;'>"
-				newHTML += "<div class='card-header'>" + thing.date + "</div>"
-				newHTML += "<div class='card-body'>"
-				newHTML += "<h5 class='card-title'>" + thing.title + "</h5>"
-				newHTML += "<p class='card-text'>" + thing.content + "</p></div>"
-				newHTML += "<ul class='list-group list-group-flush'>"
-				thing.categories.forEach(function(category){
-					newHTML += "<li class='list-group-item'>" + category + "</li>"
-				})
-				newHTML += "</ul></div>"
-			})
-
-			$('#posts').html(newHTML)
-		}
-
-
-
-
-
-
-
-
-
-
-
-
-	});
 </script>
+
 </body>
 </html>
